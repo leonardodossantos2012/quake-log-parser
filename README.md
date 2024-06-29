@@ -88,19 +88,26 @@ The CI/CD pipeline is configured to run on each push and pull request to the mai
 
 The workflow captures both the test logs and application logs as artifacts. You can download these artifacts from the workflow run summary page.
 
+**1. View on CI**
+
+  Stage: Print and save application logs
+
+  <img width="1230" alt="image" src="https://github.com/leonardodossantos2012/quake-log-parser/assets/35806393/dd3316f7-3bbc-47d7-ae40-89c5477493bd">
+
+
+**2. View all logs downloading the artifacts file**
+  
+  Artifacts: 
+  
+  <img width="1230" alt="image" src="https://github.com/leonardodossantos2012/quake-log-parser/assets/35806393/5e883f9e-b9ec-42c4-b6af-686141ec8aca">
+
+
 ### Viewing Logs Locally
 
-Logs are captured and saved to the logs directory. You can view these logs by:
+**View on local execution**
+<img width="1258" alt="image" src="https://github.com/leonardodossantos2012/quake-log-parser/assets/35806393/33fb95eb-e14c-467a-961c-5a10132de174">
 
-1. **Viewing application logs:**
-    ```sh
-    cat logs/app.log
 
-2. **Viewing test logs:**
-    ```sh
-    cat test-results/test-report.html
-
-The application logs include timestamps and detailed information about the application's execution, while the test logs provide a detailed report of the test results.
 
 ## Notes
 - The workflow introduces a delay before capturing logs to ensure that all logs are generated and flushed properly.
