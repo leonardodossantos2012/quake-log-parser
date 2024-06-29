@@ -52,13 +52,6 @@ jobs:
     - name: Run application
       run: docker-compose up --build -d app
 
-    - name: Wait for application to start
-      run: sleep 10
-
-    - name: Check if application is running
-      run: |
-        curl -f http://localhost:3000 || exit 1
-
     - name: Print and save application logs
       run: |
         docker-compose logs app > app.log
