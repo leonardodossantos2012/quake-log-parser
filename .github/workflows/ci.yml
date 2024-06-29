@@ -42,5 +42,13 @@ jobs:
     - name: Run application
       run: docker-compose up --build -d app
 
-    - name: Print application logs
-      run: docker-compose logs app
+    - name: Print and save application logs
+      run: |
+        docker-compose logs app > app.log
+        cat app.log
+
+    - name: Upload application logs
+      uses: actions/upload-artifact@v2
+      with:
+        name: application-logs
+        path: app.log
