@@ -7,5 +7,4 @@ RUN npm install
 
 COPY . .
 
-# Default command to run the application
 CMD ["npm", "start"]

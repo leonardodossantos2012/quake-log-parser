@@ -53,7 +53,7 @@ jobs:
 
     - name: Print and save application logs
       run: |
-        docker-compose logs app > app.log
+        docker-compose logs --timestamps app > app.log
         cat app.log
 
     - name: Upload application logs
