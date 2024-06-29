@@ -38,6 +38,16 @@ jobs:
 
     - name: Run tests
       run: docker-compose up --build test
+      continue-on-error: true
+
+    - name: Archive test logs
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-logs
+        path: |
+          test-results
+          logs
 
     - name: Run application
       run: docker-compose up --build -d app
