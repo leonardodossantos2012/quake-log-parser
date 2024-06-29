@@ -38,7 +38,6 @@ jobs:
 
     - name: Run tests
       run: docker-compose up --build test
-      continue-on-error: true
 
     - name: Archive test logs
       if: failure()
